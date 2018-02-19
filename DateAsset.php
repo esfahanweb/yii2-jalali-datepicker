@@ -2,13 +2,13 @@
 /**
  * DateAsset.php
  *
- * @copyright Copyright Moslem Mobarakeh, https://github.com/farsidesign, 2016
+ * @copyright Copyright Moslem Mobarakeh, https://github.com/simacms, 2016
  * @author Moslem Mobarakeh
- * @package farsidesign/yii2-jalali-datepicker
+ * @package simacms/yii2-jalali-datepicker
  * @license MIT
  */
 
-namespace farsidesign\jalalidatepicker;
+namespace simacms\jalalidatepicker;
 
 use yii\web\AssetBundle;
 
