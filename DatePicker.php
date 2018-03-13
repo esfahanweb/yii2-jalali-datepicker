@@ -87,7 +87,7 @@ class DatePicker extends InputWidget
         $this->clientOptions['defaultDate'] = $value;
         $this->clientOptions['altField'] = '#' . $this->options['id'];
         $options = $this->clientOptions;
-        
+                
         //$options['value'] = $value;
         
 
