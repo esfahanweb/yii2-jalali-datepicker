@@ -51,7 +51,18 @@ class DatePicker extends InputWidget
 
         $containerID = $this->inline ? $this->containerOptions['id'] : $this->options['id'];
         $view = $this->getView();
+        
+        //$this->clientOptions['selectedBefore']= 1;
+        
         $options = Json::htmlEncode($this->clientOptions);
+        
+        
+        
+        //$options = str_replace('}', ',"selectedBefore": !0}', $options);
+        
+        
+        
+        
         $view->registerJs("$('#{$containerID}').persianDatepicker($.extend({}, {}, $options));");
             
         $this->clientOptions['theme'] = $this->theme;
@@ -85,10 +96,12 @@ class DatePicker extends InputWidget
             }
         }
         $this->clientOptions['defaultDate'] = $value;
+        //$this->clientOptions['selectedDate'] = $value;
+        //$this->clientOptions['selectedBefore'] = 1;
         $this->clientOptions['altField'] = '#' . $this->options['id'];
         $options = $this->clientOptions;
                 
-        //$options['value'] = $value;
+        $options['value'] = $value;
         
 
         if ($this->inline === false) {
