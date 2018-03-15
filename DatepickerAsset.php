@@ -14,6 +14,7 @@ use yii\web\AssetBundle;
 
 class DatepickerAsset extends AssetBundle
 {
+    /*
     public $sourcePath = '@vendor/simacms/yii2-jalali-datepicker/assets';
     public $css = [
         'css/persianDatepicker-default.css',
@@ -21,6 +22,8 @@ class DatepickerAsset extends AssetBundle
     public $js = [
         'js/persianDatepicker.min.js',
     ];
+     * 
+     */
     /*
     public $sourcePath = '@bower/persian-datepicker/dist';
     public $css = [
@@ -33,4 +36,15 @@ class DatepickerAsset extends AssetBundle
     ];
      * 
      */
+    public $sourcePath = '@bower/persian-datepicker/dist';
+    public $css = [
+        'css/persian-datepicker.min.css',
+    ];
+    public $js = [
+        'js/persian-datepicker.min.js',
+    ];
+    public $depends = [
+        'simacms\jalalidatepicker\DateAsset',
+    ];
+     
 }

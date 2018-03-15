@@ -14,9 +14,9 @@ use yii\web\AssetBundle;
 
 class DateAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/persian-datepicker/lib';
+    public $sourcePath = '@bower/persian-date/dist';
     public $js = [
-        'persian-date.js',
+        'persian-date.min.js',
     ];
     public $depends = [
         'yii\web\JqueryAsset',

@@ -63,14 +63,18 @@ class DatePicker extends InputWidget
         
         
         
-        $view->registerJs("$('#{$containerID}').persianDatepicker($.extend({}, {}, $options));");
+        //$view->registerJs("$('#{$containerID}').persianDatepicker($.extend({}, {}, $options));");
+        $view->registerJs("$('#{$containerID}').persianDatepicker($options);");
             
         $this->clientOptions['theme'] = $this->theme;
+        /*
         if ($this->theme === 'default') {
             DatepickerThemeAsset::register($view);
         } else {
             $this->{'Datepicker' . ucfirst($this->theme) . 'ThemeAsset'}($view);
         }
+         * 
+         */
         DatepickerAsset::register($view);
     }
 
@@ -95,7 +99,7 @@ class DatePicker extends InputWidget
             } catch(InvalidParamException $e) {
             }
         }
-        $this->clientOptions['defaultDate'] = $value;
+        //$this->clientOptions['defaultDate'] = $value;
         //$this->clientOptions['selectedDate'] = $value;
         //$this->clientOptions['selectedBefore'] = 1;
         $this->clientOptions['altField'] = '#' . $this->options['id'];
